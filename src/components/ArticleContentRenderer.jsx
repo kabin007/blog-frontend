@@ -23,13 +23,15 @@ const ArticleContentRenderer = ({ html }) => {
     : processedHtml;
 
   return (
-    <div className="content-main max-w-6xl mx-auto p-6 flex flex-col lg:flex-row gap-8">
+    <div className="content-main max-w-6xl mx-auto p-6 flex flex-col gap-8">
       {/* Table of Contents */}
-      <div className="lg:w-64 w-full flex justify-center lg:block mb-6 lg:mb-0">
-        <TableOfContents
-          tocItems={tocItems}
-          scrollToSection={scrollToSection}
-        />
+      <div className="w-full flex justify-center">
+        <div className="bg-white rounded-lg  w-full max-w-md p-4">
+          <TableOfContents
+            tocItems={tocItems}
+            scrollToSection={scrollToSection}
+          />
+        </div>
       </div>
 
       <div className="flex-1 flex flex-col gap-8">
@@ -37,7 +39,7 @@ const ArticleContentRenderer = ({ html }) => {
         <div className="prose max-w-none">{parse(contentHtml)}</div>
 
         {/* FAQ Accordion */}
-        <div className="faq-section mt-8" id="heading-faq">
+        <div className="faq-section" id="heading-faq">
           <FAQAccordion faqHtml={faqHtml} />
         </div>
       </div>

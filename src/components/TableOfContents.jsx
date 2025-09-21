@@ -1,5 +1,5 @@
 const TableOfContents = ({ tocItems, scrollToSection }) => (
-  <div className="bg-white border border-gray-200 rounded-lg shadow-sm w-64 p-4">
+  <div className="bg-white border border-gray-200 rounded-lg shadow-sm w-full p-4 mb-6">
     <h3 className="font-bold text-lg mb-2">Table of Contents</h3>
     <div className="space-y-1 max-h-96 overflow-y-auto">
       {tocItems.length > 0 ? (
