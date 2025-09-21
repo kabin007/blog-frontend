@@ -1,0 +1,338 @@
+/* Universal Article Renderer Styles */
+.content-main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: "Times", "Times New Roman", serif;
+    background: #ffff;
+    color: #000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Typography - Paragraphs */
+.content-main p {
+    color: #333; /* fallback text color */
+    line-height: 1.8;
+    margin-bottom: 18px;
+    font-size: 18px; /* you asked to keep text size, not Tailwind’s 4xl/5xl */
+    font-weight: inherit;
+    text-align: justify;
+    word-spacing: 0.1em;
+    font-family: "Times", "Times New Roman", serif;
+
+    /* Gradient text effect */
+    background: linear-gradient(
+        to right,
+        #111827,
+        #1f2937,
+        #374151
+    ); /* from-gray-900 via-gray-800 to-gray-700 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* standard property */
+    color: transparent; /* ensures gradient shows */
+}
+
+/* Enhanced paragraph styling for better readability */
+.content-main p:first-child {
+    font-size: 18px;
+    font-weight: 400;
+    color: #2c3e50;
+    margin-bottom: 24px;
+}
+
+/* Headings Hierarchy */
+.content-main h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a202c;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    border-bottom: 3px solid #3182ce;
+    padding-bottom: 10px;
+}
+
+.content-main h2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #2d3748;
+    margin-top: 36px;
+    margin-bottom: 18px;
+    line-height: 1.3;
+    position: relative;
+}
+
+/*.content-main h2::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 24px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
+}*/
+
+.content-main h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #4a5568;
+    margin-top: 28px;
+    margin-bottom: 14px;
+    line-height: 1.4;
+}
+
+.content-main h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #718096;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+/* Images and Media */
+.content-main img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin: 20px 0;
+    display: block;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.content-main img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Figure elements for images */
+.content-main figure {
+    margin: 24px 0;
+    text-align: center;
+}
+
+.content-main figure img {
+    margin: 0;
+}
+
+.content-main figcaption {
+    font-size: 14px;
+    color: #718096;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* Lists */
+.content-main ul,
+.content-main ol {
+    margin: 20px 0;
+    padding-left: 30px;
+}
+
+.content-main li {
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.content-main ul li {
+    list-style-type: none;
+    position: relative;
+}
+
+.content-main ul li::before {
+    content: "•";
+    color: #667eea;
+    font-size: 20px;
+    position: absolute;
+    left: -20px;
+    top: -2px;
+}
+
+.content-main ol li {
+    padding-left: 8px;
+}
+
+/* Links */
+.content-main a {
+    color: #3182ce;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.content-main a:hover {
+    color: #2c5aa0;
+    border-bottom-color: #3182ce;
+}
+
+/* Code elements */
+.content-main code {
+    background-color: #f7fafc;
+    color: #e53e3e;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+    font-size: 14px;
+    border: 1px solid #e2e8f0;
+}
+
+/* Blockquotes */
+.content-main blockquote {
+    border-left: 4px solid #667eea;
+    padding-left: 20px;
+    margin: 24px 0;
+    font-style: italic;
+    color: #4a5568;
+    background-color: #f8f9ff;
+    padding: 16px 20px;
+    border-radius: 0 6px 6px 0;
+}
+
+/* Emphasized text */
+.content-main em {
+    font-style: italic;
+    color: #2d3748;
+}
+
+.content-main strong {
+    font-weight: 600;
+    color: #1a202c;
+}
+
+/* Dividers */
+.content-main hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #cbd5e0, transparent);
+    margin: 32px 0;
+}
+
+/* Tables */
+.content-main table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.content-main th,
+.content-main td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.content-main th {
+    background-color: #f7fafc;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.content-main tr:hover {
+    background-color: #f8f9ff;
+}
+
+/* Special content blocks */
+.content-main .highlight {
+    background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+    padding: 16px 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border-left: 4px solid #667eea;
+}
+
+/* FAQ Section Styling */
+.content-main h3 + p strong {
+    color: #2c5aa0;
+    font-size: 16px;
+}
+
+/* Case Study and Example Styling */
+.content-main h3[id*="case"],
+.content-main h3[id*="example"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    margin-top: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-main {
+        padding: 16px;
+        margin: 10px;
+    }
+
+    .content-main h1 {
+        font-size: 26px;
+    }
+
+    .content-main h2 {
+        font-size: 22px;
+    }
+
+    .content-main h2::before {
+        display: none;
+    }
+
+    .content-main p {
+        font-size: 15px;
+        text-align: left;
+    }
+
+    .content-main ul,
+    .content-main ol {
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-main {
+        padding: 12px;
+    }
+
+    .content-main h1 {
+        font-size: 22px;
+    }
+
+    .content-main h2 {
+        font-size: 18px;
+    }
+
+    .content-main h3 {
+        font-size: 16px;
+    }
+
+    .content-main p {
+        font-size: 14px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .content-main {
+        box-shadow: none;
+        max-width: none;
+        padding: 0;
+    }
+
+    .content-main img {
+        box-shadow: none;
+    }
+
+    .content-main a {
+        text-decoration: underline;
+        color: #000;
+    }
+}
